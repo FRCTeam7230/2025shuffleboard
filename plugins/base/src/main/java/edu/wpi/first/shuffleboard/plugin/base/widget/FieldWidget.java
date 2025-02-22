@@ -68,6 +68,7 @@ public class FieldWidget extends SimpleAnnotatedWidget<FieldData> {
 
   @FXML
   private void initialize() {
+    root.setRotate(90);
     setGame(game.getValue());
     game.addListener(__ -> {
       setGame(game.getValue());
@@ -105,6 +106,8 @@ public class FieldWidget extends SimpleAnnotatedWidget<FieldData> {
       updateRobotPosition();
       updateObjects(true);
     });
+    
+    
 
     dataOrDefault.addListener(__ -> {
       updateRobotPosition();
@@ -127,20 +130,20 @@ public class FieldWidget extends SimpleAnnotatedWidget<FieldData> {
   }
 
   private void centerImage() {
-    double imageRatio = backgroundImage.getImage().getHeight() / backgroundImage.getImage().getWidth();
+    double imageRatio = backgroundImage.getImage().getWidth() / backgroundImage.getImage().getHeight();
     if (backgroundImage.getFitWidth() * imageRatio
             < backgroundImage.getFitHeight()) {
-      backgroundImage.setX(robotSize.get() / 4);
-      backgroundImage.setY((backgroundImage.getFitHeight()
-              - backgroundImage.getFitWidth() * imageRatio)
+      backgroundImage.setY(robotSize.get() / 4);
+      backgroundImage.setX((backgroundImage.getFitWidth()
+              - backgroundImage.getFitHeight() * imageRatio)
               / 2
               + robotSize.get() / 4);
     } else {
-      backgroundImage.setX((backgroundImage.getFitWidth()
-              - backgroundImage.getFitHeight() / imageRatio)
+      backgroundImage.setY((backgroundImage.getFitHeight()
+              - backgroundImage.getFitWidth() / imageRatio)
               / 2
               + robotSize.get() / 4);
-      backgroundImage.setY(robotSize.get() / 4);
+      backgroundImage.setX(robotSize.get() / 4);
     }
   }
 
