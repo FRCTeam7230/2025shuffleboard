@@ -6,7 +6,10 @@
       xmlns:fx="http://javafx.com/fxml"
       fx:controller="edu.wpi.first.shuffleboard.plugin.base.widget.FieldWidget"
       fx:id="root"
-      spacing="0" minHeight="192">
+      
+      centerShape="true"
+      alignment="CENTER"
+      >
     <BorderPane fx:id="pane">
         <ImageView fx:id="backgroundImage" preserveRatio="true" />
         <ImageView fx:id="robot" preserveRatio="true" />

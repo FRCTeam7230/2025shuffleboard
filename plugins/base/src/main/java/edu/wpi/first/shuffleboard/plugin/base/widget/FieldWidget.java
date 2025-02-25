@@ -69,10 +69,11 @@ public class FieldWidget extends SimpleAnnotatedWidget<FieldData> {
   @FXML
   private void initialize() {
     root.setRotate(90);
+    // backgroundImage.setRotate(90);
     setGame(game.getValue());
     game.addListener(__ -> {
       setGame(game.getValue());
-      centerImage();
+      // centerImage();
       updateRobotPosition();
       updateObjects(true);
     });
@@ -95,14 +96,14 @@ public class FieldWidget extends SimpleAnnotatedWidget<FieldData> {
     root.heightProperty().addListener(__ -> {
       double height = root.getHeight();
       backgroundImage.setFitHeight(height - robotSize.get() / 2);
-      centerImage();
+      // centerImage();
       updateRobotPosition();
       updateObjects(true);
     });
     root.widthProperty().addListener(__ -> {
       double width = root.getWidth();
       backgroundImage.setFitWidth(width - robotSize.get() / 2);
-      centerImage();
+      // centerImage();
       updateRobotPosition();
       updateObjects(true);
     });
