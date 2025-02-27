@@ -14,15 +14,15 @@
     -fx-text-base-color: #ffffff;
     /* Swatch Colors - Red */
 
-    -swatch-100: hsb(160, 80%, 98%);
-    -swatch-200: hsb(160, 80%, 88%);
-    -swatch-300: hsb(160, 80%, 78%);
-    -swatch-400: hsb(160, 80%, 68%);
-    -swatch-500: hsb(160, 80%, 58%);
+    -swatch-100: hsb(151, 83%, 36%);
+    -swatch-200: hsb(151, 83%, 36%);
+    -swatch-300: hsb(151, 83%, 36%);
+    -swatch-400: hsb(151, 83%, 36%);
+    -swatch-500: hsb(151, 83%, 36%);
 
-    -swatch-dark-gray: #14002e;
-    -swatch-gray: #29005f;
-    -swatch-light-gray: #37009c;
+    -swatch-dark-gray: #1f0244;
+    -swatch-gray: #2f0749;
+    -swatch-light-gray: #6700ac;
     -fx-background: -swatch-gray;
     -fx-color: -swatch-gray;
     -confirmation-color-confirmed: rgb(122, 0, 133);
@@ -69,7 +69,7 @@
  *                                                                             *
  ******************************************************************************/
 .text-field, .text-area {
-    -fx-text-fill: #000;
+    -fx-text-fill: #ffffff;
     -underline-color: -swatch-gray;
 }
 
@@ -254,7 +254,7 @@
 
 .tile .label {
     -fx-text-fill: -fx-text-base-color;
-    -fx-text-fill: #000;
+    -fx-text-fill: #ffffff;
 
 }
 
