@@ -34,10 +34,10 @@ import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Circle;
 
-@Description(name = "Field", dataTypes = FieldData.class)
+@Description(name = "Field (BLU)", dataTypes = FieldData.class)
 @SuppressWarnings({"EmptyCatchBlock", "PMD.TooManyFields"})
-@ParametrizedController("FieldWidget.fxml")
-public class FieldWidget extends SimpleAnnotatedWidget<FieldData> {
+@ParametrizedController("FieldWidgetBlu.fxml")
+public class FieldWidgetBlu extends SimpleAnnotatedWidget<FieldData> {
   @FXML
   private Pane root;
 
@@ -68,7 +68,8 @@ public class FieldWidget extends SimpleAnnotatedWidget<FieldData> {
 
   @FXML
   private void initialize() {
-    root.setRotate(90);
+    root.setRotate(270);
+    root.setLayoutX(-50);
     // backgroundImage.setRotate(90);
     setGame(game.getValue());
     game.addListener(__ -> {
