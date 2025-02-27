@@ -23,7 +23,8 @@ import edu.wpi.first.shuffleboard.plugin.base.data.types.BasicSubsystemType;
 import edu.wpi.first.shuffleboard.plugin.base.data.types.CommandType;
 import edu.wpi.first.shuffleboard.plugin.base.data.types.DifferentialDriveType;
 import edu.wpi.first.shuffleboard.plugin.base.data.types.EncoderType;
-import edu.wpi.first.shuffleboard.plugin.base.data.types.FieldType;
+import edu.wpi.first.shuffleboard.plugin.base.data.types.FieldTypeRed;
+import edu.wpi.first.shuffleboard.plugin.base.data.types.FieldTypeBlu;
 import edu.wpi.first.shuffleboard.plugin.base.data.types.FmsInfoType;
 import edu.wpi.first.shuffleboard.plugin.base.data.types.GyroType;
 import edu.wpi.first.shuffleboard.plugin.base.data.types.MecanumDriveType;
@@ -52,7 +53,8 @@ import edu.wpi.first.shuffleboard.plugin.base.widget.ComboBoxChooserWidget;
 import edu.wpi.first.shuffleboard.plugin.base.widget.CommandWidget;
 import edu.wpi.first.shuffleboard.plugin.base.widget.DifferentialDriveWidget;
 import edu.wpi.first.shuffleboard.plugin.base.widget.EncoderWidget;
-import edu.wpi.first.shuffleboard.plugin.base.widget.FieldWidget;
+import edu.wpi.first.shuffleboard.plugin.base.widget.FieldWidgetBlu;
+import edu.wpi.first.shuffleboard.plugin.base.widget.FieldWidgetRed;
 import edu.wpi.first.shuffleboard.plugin.base.widget.GraphWidget;
 import edu.wpi.first.shuffleboard.plugin.base.widget.GyroWidget;
 import edu.wpi.first.shuffleboard.plugin.base.widget.MecanumDriveWidget;
@@ -131,7 +133,8 @@ public class BasePlugin extends Plugin {
         DifferentialDriveType.Instance,
         FmsInfoType.Instance,
         UltrasonicType.Instance,
-        FieldType.Instance,
+        FieldTypeRed.Instance,
+        FieldTypeBlu.Instance,
         AlertsType.Instance
     );
   }
@@ -167,7 +170,8 @@ public class BasePlugin extends Plugin {
         WidgetType.forAnnotatedWidget(MecanumDriveWidget.class),
         WidgetType.forAnnotatedWidget(BasicFmsInfoWidget.class),
         WidgetType.forAnnotatedWidget(UltrasonicWidget.class),
-        WidgetType.forAnnotatedWidget(FieldWidget.class),
+        WidgetType.forAnnotatedWidget(FieldWidgetRed.class),
+        WidgetType.forAnnotatedWidget(FieldWidgetBlu.class),
         WidgetType.forAnnotatedWidget(AlertsWidget.class),
         new LayoutClass<>("List Layout", ListLayout.class),
         new LayoutClass<>("Grid Layout", GridLayout.class),
@@ -201,7 +205,8 @@ public class BasePlugin extends Plugin {
         .put(FmsInfoType.Instance, WidgetType.forAnnotatedWidget(BasicFmsInfoWidget.class))
         .put(UltrasonicType.Instance, WidgetType.forAnnotatedWidget(UltrasonicWidget.class))
         .put(BasicSubsystemType.Instance, WidgetType.forAnnotatedWidget(BasicSubsystemWidget.class))
-        .put(FieldType.Instance, WidgetType.forAnnotatedWidget(FieldWidget.class))
+        .put(FieldTypeRed.Instance, WidgetType.forAnnotatedWidget(FieldWidgetRed.class))
+        .put(FieldTypeBlu.Instance, WidgetType.forAnnotatedWidget(FieldWidgetBlu.class))
         .put(AlertsType.Instance, WidgetType.forAnnotatedWidget(AlertsWidget.class))
         .put(SubsystemType.Instance, createSubsystemLayoutType())
         .build();

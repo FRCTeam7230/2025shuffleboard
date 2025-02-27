@@ -6,10 +6,10 @@ import edu.wpi.first.shuffleboard.plugin.base.data.FieldData;
 import java.util.Map;
 import java.util.function.Function;
 
-public final class FieldType extends ComplexDataType<FieldData> {
-  public static final FieldType Instance = new FieldType();
+public final class FieldTypeRed extends ComplexDataType<FieldData> {
+  public static final FieldTypeRed Instance = new FieldTypeRed();
 
-  private FieldType() {
+  private FieldTypeRed() {
     super("Field2d", FieldData.class);
   }
 
